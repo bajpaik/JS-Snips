@@ -8,3 +8,11 @@ function capitalize (string) {
 return string.charAt(0).toUpperCase() + string.substring(1);
 }
 console.log(capitalize('hello'))
+
+
+/****************Create emoji characters from a numeric value in #javascript.****************/
+
+const smile = String.fromCodePoint(0x1F600);
+let str = `Smile ${smile} you are on TV`
+
+console.log(str)
