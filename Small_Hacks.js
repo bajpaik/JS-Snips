@@ -16,3 +16,8 @@ const smile = String.fromCodePoint(0x1F600);
 let str = `Smile ${smile} you are on TV`
 
 console.log(str)
+
+/******************Generate Random Integer*****************************************/
+function randInt(min, max) {
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
