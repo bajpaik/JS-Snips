@@ -1,0 +1,49 @@
+<html>
+  <div>
+  <div id="actualJSON"> </div> <br>
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <input type="text" id="searchedJSON" placeholder="Search JSON"}></input>
+<div id="filteredJSON">
+  
+</div>
+
+<div id="jsonContent">
+  
+</div>
+</div>
+ </html>
+<script>
+var arr = [
+  {"name": "Kush", "code": "CN"}, 
+  {"name": "Harshal Islands", "code": "IN"}, 
+  {"name": "Vishal", "code": "DU"}, 
+  {"name": "Brad", "code": "NZ"}
+];
+
+var space = document.getElementById('filteredJSON');
+space.textContent = JSON.stringify(arr);
+
+$('#searchedJSON').on('input',function(){
+
+  var searchText = $('#searchedJSON').val();
+
+var brr = filterValuePart(arr, searchText)
+     
+setTimeout(()=>{
+           
+           $('#filteredJSON').text(JSON.stringify(brr));
+         },1000)
+  })
+
+function filterValuePart(arr, part) {
+    part = part.toLowerCase();
+
+    return arr.filter(function(obj) {
+        return Object.keys(obj)
+                     .some(function(k) { 
+                               return obj[k].toLowerCase().indexOf(part) !== -1; 
+                           });
+    });
+};
+
+</script>
