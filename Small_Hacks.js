@@ -32,3 +32,6 @@ function guid() {
 	  return s4() + s4() + '-' + s4() + '-' + s4() + '-' +
 		s4() + '-' + s4() + s4() + s4();
 	}
+/******************TRIM SPACES IN BETWEEN****************************/
+var a = "User     Sentiment";
+console.log(a.replace(/ /g, ""))
