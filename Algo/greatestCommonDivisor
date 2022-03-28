@@ -1,0 +1,22 @@
+function gcd(a, b){
+/**swap greatest variable**/
+  var g, l, gcf;
+  if(a>b){
+    g=a; l=b;
+  }
+  else{
+    g=b; l=a;
+  }
+  
+ /**check for greatest common divisor**/
+  gcf = g%l;
+while(gcf!==0){
+  g = l;
+  l = gcf;
+  gcf = g%l;
+
+}
+    return l;
+}
+
+console.log(gcd(60,96))
