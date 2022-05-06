@@ -2,10 +2,9 @@
 var array1 = [1,2,3,4,4,5,5,6];
 
 function removeDuplicatesFromSingleDimensionArray(array){
-let obj ={};
-for (let i of array){
-  obj[i]= true;
-  
+ let obj ={};
+  for (let i of array){
+  obj[i]= true; 
 }
 return (Object.keys(obj))
 }
