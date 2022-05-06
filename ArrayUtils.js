@@ -49,3 +49,19 @@ function find_duplicate_in_array(arra1) {
 }
 document.write(find_duplicate_in_array([1, 2, -2, 4, 5, 4, 7, 8, 7, 7, 71, 3, 6]));
 /********************************************************************/
+
+ /**********************************************************
+     @ Function Name : removeDuplicates.
+     @ Description   : Method to remove Duplicates from array
+     @ Param         : @arr - array object, @key - string to remove
+     @ Return        : array
+     ***********************************************************/
+    removeDuplicates: function(arr, key) {
+        var data = [];
+        var self = this;
+        arr.forEach(function(arrData) {
+            if (self.filter(data, key, arrData[key]).length == 0)
+                data.push(arrData);
+        });
+        return data;
+    },
